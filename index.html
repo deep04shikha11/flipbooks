@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Book</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://turnjs.com/lib/turn.min.js"></script>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        #flipbook .page {
+            cursor: progress;
+            background: rgb(240, 235, 235);
+        }
+        h1 , p{
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: 60%;
+        }
+        #flipbook .shadow,
+        #flipbook.shadow {
+            -webkit-box-shadow: 0 4px 10px #666;
+            -moz-box-shadow: 0 4px 10px #666;
+            -ms-box-shadow: 0 4px 10px #666;
+            -o-box-shadow: 0 4px 10px #666;
+            box-shadow: 0 4px 10px #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flipbook">
+        <div>
+            <h1>Cover Page</h1>
+            <img src="https://miro.medium.com/max/1400/1*rScLdRGRlTOvyLdUfAy6Qg.jpeg" alt="">
+        </div>
+        <div>
+            <h1>First Page</h1>
+            <p>First page content</p>
+        </div>
+        <div>
+            <h1>second Page</h1>
+            <p>second page content</p>
+        </div>
+        <div>
+            <h1>third Page</h1>
+            <p>third page content</p>
+        </div>
+        <div>
+            <h1>Fourth Page</h1>
+            <p>Fourth page content</p>
+        </div>
+        <div>
+            <h1>Last Page</h1>
+            <img src="https://pbs.twimg.com/profile_images/542205344198303744/E8LIxY0i_400x400.png" alt="last">
+        </div>
+    </div>
+</body>
+<script>
+    $("#flipbook").turn({
+        width: 600,
+        height: 500,
+        autoCenter: true
+    });
+</script>
+
+</html>
